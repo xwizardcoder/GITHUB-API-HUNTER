@@ -6,3 +6,11 @@ prompt 1:
 help me to add new battle mode button for only battle using two user names in same page using toggle button 
 ```
 
+prompt 2:
+
+```
+the user who is winning after comparing stars turn their box green and looser as red 
+```
+
+
+
