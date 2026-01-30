@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GitHub API HUNTER</title>
+
+  <link rel="stylesheet" href="output.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen text-white">
+
+
+  <header class="top-0 sticky z-10">
+    <nav
+      class="w-full min-h-[70px]
+             flex flex-col sm:flex-row
+             items-center sm:justify-between
+             px-4 sm:px-5
+             shadow-[_0px_0px_10px_0px_white]
+             bg-gray-800">
+
+  
+      <div class="logo">
+        <ul>
+          <li class="text-xl sm:text-2xl font-bold text-center sm:text-left">
+            GITHUB API HUNTER
+          </li>
+        </ul>
+      </div>
+
+   
+      <div class="flex justify-center gap-3 sm:gap-4 items-center p-2">
+        <button onclick="setMode('single')"
+          class="bg-blue-600 text-white rounded p-2 cursor-pointer">
+          Single Search
+        </button>
+
+        <button onclick="setMode('battle')"
+          class="bg-purple-600 text-white rounded p-2 cursor-pointer">
+          Battle Mode
+        </button>
+      </div>
+
+    </nav>
+  </header>
+
+
+  <main>
+    <section
+      class="p-3 sm:p-6 pt-10 min-h-screen
+             bg-gradient-to-r from-gray-600 via-gray-700 to-gray-800">
+
+  
+      <div id="singleMode"
+        class="flex flex-col items-center justify-center gap-6 sm:gap-10 mb-6">
+
+        <h2 class="text-3xl font-bold text-center">
+          Enter Username to Search GitHub Profile
+        </h2>
+
+        <p class="font-serif text-yellow-300 text-center">
+          Enter any github username to get their profile data
+        </p>
+
+        <div class="inpur-field flex flex-col sm:flex-row gap-3 items-center">
+          <input id="username"
+            placeholder="GitHub username"
+            class="px-4 py-2 border rounded-3xl
+                   w-full max-w-[500px] sm:w-72
+                   bg-white text-black" />
+
+          <button onclick="searchUser()"
+            class="px-4 py-2 bg-amber-500 text-white
+                   cursor-pointer rounded-3xl">
+            Search
+          </button>
+        </div>
+      </div>
+
+      <div id="battleMode"
+        class="hidden flex flex-col items-center justify-center gap-6 sm:gap-10 mb-6">
+
+        <h2 class="text-xl sm:text-2xl font-bold text-center">
+          Welcome to the Battle Arena
+        </h2>
+
+        <p class="text-yellow-300 text-center">
+          Enter two GitHub usernames to compare their profiles
+        </p>
+
+        <div class="battlemod-input flex flex-col sm:flex-row gap-3 items-center">
+          <input id="user1"
+            placeholder="Player 1"
+            class="px-4 py-2 border rounded-3xl
+                   w-full sm:w-72 bg-white text-black" />
+
+          <input id="user2"
+            placeholder="Player 2"
+            class="px-4 py-2 border rounded-3xl
+                   w-full sm:w-72 bg-white text-black" />
+
+          <button onclick="battle()"
+            class="px-4 py-2 bg-amber-500 text-white
+                   cursor-pointer rounded-3xl">
+            Battle
+          </button>
+        </div>
+      </div>
+
+ 
+      <div id="status"
+        class="text-center font-semibold mb-6 px-2">
+      </div>
+
+    
+      <div id="result"
+        class="flex flex-col sm:flex-row flex-wrap justify-center gap-6 px-2">
+      </div>
+
+    </section>
+  </main>
+
+  <script src="index.js"></script>
+</body>
+</html>
